@@ -55,8 +55,29 @@ Console.WriteLine($" Max is {max} ");
 7 -> нет
 */
 
+
 Console.Write("Enter number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if(number % 2 == 1) Console.Write("Odd (нечетное) number.");
-else  Console.Write("Even (четное) number.");
+if(number % 2 == 0) Console.Write((number) + " - Even (четное) number.");
+else  Console.Write((number) + " - Odd (нечетное) number.");
+
+
+//Задача 8: Напишите программу, которая на вход принимает число (N), 
+//а на выходе показывает все чётные числа от 1 до N.
+/*
+5 -> 2, 4
+8 -> 2, 4, 6, 8
+*/
+
+/*
+Console.Write("Enter number: ");
+int N = Convert.ToInt32(Console.ReadLine());
+int i = 1;
+while(i <= N)
+{
+    if(i % 2 == 0) Console.Write((i) + ", ");
+    i++;
+}
+*/
+
