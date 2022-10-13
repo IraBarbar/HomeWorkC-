@@ -31,6 +31,7 @@ else
 22 3 9 -> 22
 */
 
+/*
 Console.Write("Enter the first number: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter the second number: ");
@@ -44,6 +45,18 @@ if(number2 > max) max = number2;
 if(number3 > max) max = number3;
 
 Console.WriteLine($" Max is {max} ");
+*/
 
+//Задача 6: Напишите программу, которая на вход принимает число
+// и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+/*
+4 -> да
+-3 -> нет
+7 -> нет
+*/
 
+Console.Write("Enter number: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
+if(number % 2 == 1) Console.Write("Odd (нечетное) number.");
+else  Console.Write("Even (четное) number.");
