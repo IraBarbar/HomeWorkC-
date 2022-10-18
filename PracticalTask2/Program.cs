@@ -47,7 +47,7 @@ Console.Write(result);
 918 -> 1
 */
 
-
+/*
 bool TestThird(int N)
 {
     if( N > 99 && N < 1000) return true;
@@ -79,5 +79,47 @@ while (test == false)
 
 int result = FindSecond(n);
 
-
 Console.WriteLine(result);
+*/
+/*
+Задача 15: Напишите программу, которая принимает на вход цифру,
+ обозначающую день недели, и проверяет, является ли этот день выходным.
+
+6 -> да
+7 -> да
+1 -> нет
+*/
+
+bool CorrectEnter(int n)
+{
+    if (n > 0 && n < 8) return true;
+    else return false;
+}
+
+bool DayOfWeek(int n)
+{
+    if( n > 0 && n < 6 ) return true;
+    else  return false;
+}
+Console.WriteLine("Please, enter the number from 1 to 7");
+int n = Convert.ToInt32(Console.ReadLine());
+
+bool test = CorrectEnter(n);
+
+int n1 = n;
+bool newtest = test; 
+while( test == false)
+{
+    Console.WriteLine("You entered the wrong number! Please, enter the number from 1 to 7. ");
+    n1 = Convert.ToInt32(Console.ReadLine());
+    newtest = CorrectEnter(n1);
+    n = n1;
+    test = newtest;
+}
+
+bool result = DayOfWeek(n);
+if (result == true) 
+    Console.WriteLine($"{n} - weekday");
+else
+    Console.WriteLine($"{n} - weekends");
+    
