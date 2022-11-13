@@ -15,7 +15,7 @@ void ShowArray ( int [] array) // кроме 38 задачи необходим 
  [345, 897, 568, 234] -> 2
  */
 
-
+/*
 
 int [] CreateRandomArray (int size)
 {
@@ -47,7 +47,7 @@ ShowArray(myArray);
 
 Console.WriteLine ( "- Sum of even numbers = "+(SumEvenNumbers  (myArray)));
 
-
+*/
 /* Задача 36: Задайте одномерный массив, заполненный случайными числами.
  Найдите сумму элементов, стоящих на нечётных позициях.
 
@@ -59,10 +59,10 @@ Console.WriteLine ( "- Sum of even numbers = "+(SumEvenNumbers  (myArray)));
  и минимальное значение необходимо запросить у пользователя, 
 я решила попробовать изменить метод без зопроса данных. 
 */
-/*
+
 int [] CreateRandomArray ()
 {
-    int size = 10;
+    int size = 11;
     int [] array = new int [size];
     for (int i = 0; i < size; i++)
     {
@@ -75,14 +75,17 @@ int SumNumOddElements (int [] array)
 {
     int sum = 0;
     for (int i = 1; i < array.Length; i +=2)
+        {
         sum = sum + array[i];
+        Console.Write ($"{array[i]} ");
+        }
     return sum;
 }
 
 int [] myArray = CreateRandomArray();
 ShowArray(myArray);
-Console.WriteLine("Sum of numbers of the odd's elements = " + (SumNumOddElements (myArray)));
-*/
+Console.WriteLine("- Sum of numbers of the odd's elements = " + (SumNumOddElements (myArray)));
+
 
 /*
 Задача 38: Задайте массив вещественных чисел. 
