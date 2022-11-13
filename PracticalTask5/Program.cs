@@ -1,4 +1,4 @@
-﻿ 
+﻿ /*
 
 void ShowArray ( int [] array) // кроме 38 задачи необходим этот метод.
 {
@@ -7,7 +7,7 @@ void ShowArray ( int [] array) // кроме 38 задачи необходим 
     Console.WriteLine();    
 }
 
-
+*/
 /*
  Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
  Напишите программу, которая покажет количество чётных чисел в массиве.
@@ -59,7 +59,7 @@ Console.WriteLine ( "- Sum of even numbers = "+(SumEvenNumbers  (myArray)));
  и минимальное значение необходимо запросить у пользователя, 
 я решила попробовать изменить метод без зопроса данных. 
 */
-
+/*
 int [] CreateRandomArray ()
 {
     int size = 11;
@@ -85,7 +85,7 @@ int SumNumOddElements (int [] array)
 int [] myArray = CreateRandomArray();
 ShowArray(myArray);
 Console.WriteLine("- Sum of numbers of the odd's elements = " + (SumNumOddElements (myArray)));
-
+*/
 
 /*
 Задача 38: Задайте массив вещественных чисел. 
@@ -93,13 +93,14 @@ Console.WriteLine("- Sum of numbers of the odd's elements = " + (SumNumOddElemen
 
 [3 7 22 2 78] -> 76
 */
-/*
+
 double [] CreateRandomArray (int size, int minValue, int maxValue)
 {
     double [] array = new double [size];
-    for (int i = 0; i < size; i++)
+        for (int i = 0; i < size; i++)
     {
-        array[i] = new Random(). Next(minValue, maxValue);
+        array[i] = new Random().Next(minValue, maxValue) + new Random().NextDouble();
+                   
     }
     return array;
 }
@@ -107,7 +108,7 @@ double [] CreateRandomArray (int size, int minValue, int maxValue)
 void ShowArrayD ( double [] array)
 {
     for ( int i = 0; i < array.Length; i++)
-        Console.Write(array [i] + " ");
+        Console.Write($"{Math.Round (array [i],2)}  ");
     Console.WriteLine();    
 }
 
@@ -136,7 +137,7 @@ Console.WriteLine("Input a max possible value");
 int max = Convert.ToInt32(Console.ReadLine());
 
 double [] myArray = CreateRandomArray(n, min, max);
+
 ShowArrayD(myArray);
 
-Console.WriteLine(" Difference between Max and Min = " + (DifferenceMaxMin (myArray)) );
-*/
+Console.WriteLine(" Difference between Max and Min = " + Math.Round ((DifferenceMaxMin (myArray)),2) );
