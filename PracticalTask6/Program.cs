@@ -94,6 +94,7 @@ double k2 = Convert.ToInt32(Console.ReadLine());
 if (TestLine( k1, k2) == true)
 {
     double [] coordinates = PointInter(b1, k1, b2, k2);
-    ShowArray (coordinates);
+    Console.Write("Line intersection coordinates: ");
+    ShowArray(coordinates);
 }
-else Console.WriteLine("Прямые линии не пересекаются");
+else Console.WriteLine("Straight lines don't intersect!");
