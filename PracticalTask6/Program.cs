@@ -55,7 +55,7 @@ Console.WriteLine("Positive elements are " + SumPositiveElement(array));
 
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 */
-
+/* 
 double [] PointInter(double b1, double k1, double b2, double k2)
 {
     double [] point = new double [2];
@@ -98,3 +98,34 @@ if (TestLine( k1, k2) == true)
     ShowArray(coordinates);
 }
 else Console.WriteLine("Straight lines don't intersect!");
+*/
+// Оптимизация!
+
+void Coordinates(double b1, double k1, double b2, double k2)
+{
+    if (k2-k1 == 0) 
+    {
+        Console.WriteLine("Straight lines don't intersect!");
+    }
+    else 
+    {
+        double x = -((b2 - b1) / (k2 - k1));
+        double y = (k2 * x + b2);
+        Math.Round(x,3); Math.Round(y,3);
+        Console.WriteLine($"Line intersection coordinates: ({x} ; {y})");
+    }
+}
+
+Console.WriteLine("Input b1");
+double b1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input k1");
+double k1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Input b2");
+double b2 = Convert.ToInt32(Console.ReadLine());        
+
+Console.WriteLine("Input k2");
+double k2 = Convert.ToInt32(Console.ReadLine());
+
+Coordinates(b1, k1, b2, k2);
