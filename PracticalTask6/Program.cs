@@ -103,15 +103,15 @@ else Console.WriteLine("Straight lines don't intersect!");
 
 void Coordinates(double b1, double k1, double b2, double k2)
 {
-    if (k2-k1 == 0) 
+    if (k2 - k1 == 0)
     {
         Console.WriteLine("Straight lines don't intersect!");
     }
-    else 
+    else
     {
         double x = -((b2 - b1) / (k2 - k1));
         double y = (k2 * x + b2);
-        Math.Round(x,3); Math.Round(y,3);
+        Math.Round(x, 3); Math.Round(y, 3);
         Console.WriteLine($"Line intersection coordinates: ({x} ; {y})");
     }
 }
@@ -123,7 +123,7 @@ Console.WriteLine("Input k1");
 double k1 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Input b2");
-double b2 = Convert.ToInt32(Console.ReadLine());        
+double b2 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Input k2");
 double k2 = Convert.ToInt32(Console.ReadLine());
