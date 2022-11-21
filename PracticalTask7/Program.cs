@@ -144,15 +144,14 @@ ShowElement(myArray, m, n);
 double[] ArithmeticMeanColumOfMatrix(int[,] array)
 
 {
-    double[] meanArr =new double[array.GetLength(1)];
+    double[] meanArr = new double[array.GetLength(1)];
     double sum = 0;
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        for (int i = 0; i < array.GetLength(0); i++)
+    
+                                        
         {
             sum = (sum + array[i, j]);
         }
-        meanArr[j] = sum/array.GetLength(0);     
+        meanArr[j] = sum / array.GetLength(0);
     }
     return meanArr;
 }
@@ -195,7 +194,7 @@ void ShowArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
 
-        Console.Write(Math.Round(array[i],2) + "   ");
+        Console.Write(Math.Round(array[i], 2) + "   ");
 
     Console.WriteLine();
 }
