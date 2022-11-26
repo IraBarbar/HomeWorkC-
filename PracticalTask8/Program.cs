@@ -254,6 +254,14 @@ if (TestMean(m, n, t) == false)
     Console.WriteLine("Значения элемента ограничено двухзначным числом");
 */
 /*
+Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+Например, на выходе получается вот такой массив:
+01 02 03 04
+12 13 14 05
+11 16 15 06
+10 09 08 07
+*/
+
 int[,] Spiral(int n)
 {
    int[,] arr = new int[n, n];
@@ -318,4 +326,4 @@ Console.WriteLine("Input a number of rows and columns!");
 int t = Convert.ToInt32(Console.ReadLine());
 int[,] myArray = Spiral(t);
 Show2dArray(myArray);
-*/
+
